@@ -16,7 +16,11 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-    }
+    },
+    avatar: {
+        type: String,
+        default: "https://cdn1.iconfinder.com/data/icons/avatars-1-5/136/87-512.png",
+    },
 
 }, {timestamps: true}
 );
