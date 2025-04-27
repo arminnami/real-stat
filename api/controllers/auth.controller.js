@@ -27,7 +27,7 @@ const {email, password} = req.body;
     } 
     const validPassword = bcrypt.compareSync(password, validUser.password);
     if (!validPassword){
-      return next(errorHandler(400, "wrong password or username!"));
+      return next(errorHandler(400, "Wrong password or username!"));
     }
     const token = jwt.sign({id: validUser._id}, process.env.JWT_SECRET);
     const{ password: pass, ...rest} = validUser._doc;
